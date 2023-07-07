@@ -10,11 +10,11 @@ class Pagina extends StatefulWidget {
 
 class _PaginaState extends State<Pagina> {
   final List<String> _lista = <String>[
-    'Aula 03/07/2023',
-    'Aula 04/07/2023',
-    'Aula 05/07/2023',
-    'Aula 06/07/2023',
-    'Aula 07/07/2023'
+    'Aula - 03/07/2023',
+    'Aula - 04/07/2023',
+    'Aula - 05/07/2023',
+    'Aula - 06/07/2023',
+    'Aula - 07/07/2023'
   ];
 
   @override
@@ -23,10 +23,16 @@ class _PaginaState extends State<Pagina> {
       appBar: AppBar(
         backgroundColor: Colors.orange,
         title: const Text(
-          'Lista de Aulas',
-          style: TextStyle(color: Color.fromARGB(255, 45, 45, 45)),
+          'Lista de Aulas'), 
+          actions: [
+          IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: const Icon(Icons.exit_to_app)
+              )
+          ], 
         ),
-      ),
       body: Container(
         padding: const EdgeInsets.all(16),
         child: Center(
